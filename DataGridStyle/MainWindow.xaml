@@ -122,24 +122,6 @@
                 </x:Array>
             </CollectionViewSource.Source>
         </CollectionViewSource>
-
-        <!-- Status Colors -->
-        <Style x:Key="StatusTextBlockStyle" TargetType="TextBlock">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Status}" Value="Checked Out">
-                    <Setter Property="Foreground" Value="#FF6B5BC5"/>
-                </DataTrigger>
-                <DataTrigger Binding="{Binding Status}" Value="Reserving">
-                    <Setter Property="Foreground" Value="#FF4CAF50"/>
-                </DataTrigger>
-                <DataTrigger Binding="{Binding Status}" Value="Stopped">
-                    <Setter Property="Foreground" Value="#FFDDDDDD"/>
-                </DataTrigger>
-                <DataTrigger Binding="{Binding Status}" Value="Idle">
-                    <Setter Property="Foreground" Value="#FFDDDDDD"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
     </Window.Resources>
 
     <Grid>
@@ -168,28 +150,7 @@
                 <DataGridTextColumn Header="ITEM" Binding="{Binding Item}" Width="150"/>
                 <DataGridTextColumn Header="PROXY" Binding="{Binding Proxy}" Width="120"/>
                 <DataGridTextColumn Header="ACCOUNT" Binding="{Binding Account}" Width="200"/>
-                <DataGridTemplateColumn Header="STATUS" Width="120">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Status}" 
-                                     Style="{StaticResource StatusTextBlockStyle}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="120">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Button Content="▶" Width="24" Height="24" Margin="2,0" 
-                                        Background="Transparent" BorderBrush="Transparent" Foreground="#FF6B5BC5"/>
-                                <Button Content="🔧" Width="24" Height="24" Margin="2,0"
-                                        Background="Transparent" BorderBrush="Transparent" Foreground="#FF6B5BC5"/>
-                                <Button Content="🗑" Width="24" Height="24" Margin="2,0"
-                                        Background="Transparent" BorderBrush="Transparent" Foreground="#FFFF5252"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="STATUS" Binding="{Binding Status}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
