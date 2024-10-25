@@ -22,13 +22,26 @@
 
         <!-- Header Style -->
         <Style x:Key="DarkDataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
-            <Setter Property="Background" Value="#FF6B5BC5"/>
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="#FFDDDDDD"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Margin" Value="10 0"/>
-            <Setter Property="Padding" Value="11,10"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="5 3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridColumnHeader">
+                        <Border Background="#FF6B5BC5"
+                            BorderThickness="0"
+                            CornerRadius="8"
+                            Margin="{TemplateBinding Margin}">
+                            <ContentPresenter Margin="10,10"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <!-- Row Style -->
@@ -41,9 +54,9 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="DataGridRow">
                         <Border x:Name="RowBorder" 
-                        Background="#FF1E1E1E"
-                        CornerRadius="8" 
-                        Margin="{TemplateBinding Margin}">
+                            Background="#FF1E1E1E"
+                            CornerRadius="8" 
+                            Margin="{TemplateBinding Margin}">
                             <SelectiveScrollingGrid>
                                 <SelectiveScrollingGrid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
