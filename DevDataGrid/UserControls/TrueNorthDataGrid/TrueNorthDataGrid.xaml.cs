@@ -179,6 +179,192 @@ namespace DevDataGrid.UserControls
         }
         #endregion
 
+        #region Font Properties
+        // Header Font Properties
+        public static readonly DependencyProperty HeaderFontFamilyProperty =
+            DependencyProperty.Register(
+                "HeaderFontFamily",
+                typeof(FontFamily),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new FontFamily("Segoe UI")));
+
+        public FontFamily HeaderFontFamily
+        {
+            get { return (FontFamily)GetValue(HeaderFontFamilyProperty); }
+            set { SetValue(HeaderFontFamilyProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontSizeProperty =
+            DependencyProperty.Register(
+                "HeaderFontSize",
+                typeof(double),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(14.0));
+
+        public double HeaderFontSize
+        {
+            get { return (double)GetValue(HeaderFontSizeProperty); }
+            set { SetValue(HeaderFontSizeProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontWeightProperty =
+            DependencyProperty.Register(
+                "HeaderFontWeight",
+                typeof(FontWeight),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontWeights.SemiBold));
+
+        public FontWeight HeaderFontWeight
+        {
+            get { return (FontWeight)GetValue(HeaderFontWeightProperty); }
+            set { SetValue(HeaderFontWeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontStyleProperty =
+            DependencyProperty.Register(
+                "HeaderFontStyle",
+                typeof(FontStyle),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontStyles.Normal));
+
+        public FontStyle HeaderFontStyle
+        {
+            get { return (FontStyle)GetValue(HeaderFontStyleProperty); }
+            set { SetValue(HeaderFontStyleProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontStretchProperty =
+            DependencyProperty.Register(
+                "HeaderFontStretch",
+                typeof(FontStretch),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontStretches.Normal));
+
+        public FontStretch HeaderFontStretch
+        {
+            get { return (FontStretch)GetValue(HeaderFontStretchProperty); }
+            set { SetValue(HeaderFontStretchProperty, value); }
+        }
+
+        // Cell Font Properties
+        public static readonly DependencyProperty CellFontFamilyProperty =
+            DependencyProperty.Register(
+                "CellFontFamily",
+                typeof(FontFamily),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new FontFamily("Segoe UI")));
+
+        public FontFamily CellFontFamily
+        {
+            get { return (FontFamily)GetValue(CellFontFamilyProperty); }
+            set { SetValue(CellFontFamilyProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellFontSizeProperty =
+            DependencyProperty.Register(
+                "CellFontSize",
+                typeof(double),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(12.0));
+
+        public double CellFontSize
+        {
+            get { return (double)GetValue(CellFontSizeProperty); }
+            set { SetValue(CellFontSizeProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellFontWeightProperty =
+            DependencyProperty.Register(
+                "CellFontWeight",
+                typeof(FontWeight),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontWeights.Normal));
+
+        public FontWeight CellFontWeight
+        {
+            get { return (FontWeight)GetValue(CellFontWeightProperty); }
+            set { SetValue(CellFontWeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellFontStyleProperty =
+            DependencyProperty.Register(
+                "CellFontStyle",
+                typeof(FontStyle),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontStyles.Normal));
+
+        public FontStyle CellFontStyle
+        {
+            get { return (FontStyle)GetValue(CellFontStyleProperty); }
+            set { SetValue(CellFontStyleProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellFontStretchProperty =
+            DependencyProperty.Register(
+                "CellFontStretch",
+                typeof(FontStretch),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(FontStretches.Normal));
+
+        public FontStretch CellFontStretch
+        {
+            get { return (FontStretch)GetValue(CellFontStretchProperty); }
+            set { SetValue(CellFontStretchProperty, value); }
+        }
+
+        // Text Alignment Properties
+        public static readonly DependencyProperty HeaderTextAlignmentProperty =
+            DependencyProperty.Register(
+                "HeaderTextAlignment",
+                typeof(TextAlignment),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(TextAlignment.Left));
+
+        public TextAlignment HeaderTextAlignment
+        {
+            get { return (TextAlignment)GetValue(HeaderTextAlignmentProperty); }
+            set { SetValue(HeaderTextAlignmentProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellTextAlignmentProperty =
+            DependencyProperty.Register(
+                "CellTextAlignment",
+                typeof(TextAlignment),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(TextAlignment.Left));
+
+        public TextAlignment CellTextAlignment
+        {
+            get { return (TextAlignment)GetValue(CellTextAlignmentProperty); }
+            set { SetValue(CellTextAlignmentProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderHorizontalAlignmentProperty =
+            DependencyProperty.Register(
+                "HeaderHorizontalAlignment",
+                typeof(HorizontalAlignment),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(HorizontalAlignment.Left));
+
+        public HorizontalAlignment HeaderHorizontalAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(HeaderHorizontalAlignmentProperty); }
+            set { SetValue(HeaderHorizontalAlignmentProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellHorizontalAlignmentProperty =
+            DependencyProperty.Register(
+                "CellHorizontalAlignment",
+                typeof(HorizontalAlignment),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(HorizontalAlignment.Left));
+
+        public HorizontalAlignment CellHorizontalAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(CellHorizontalAlignmentProperty); }
+            set { SetValue(CellHorizontalAlignmentProperty, value); }
+        }
+        #endregion
 
         #region Color Properties
         public static readonly DependencyProperty BackgroundColorProperty =

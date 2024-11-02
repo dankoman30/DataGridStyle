@@ -17,10 +17,15 @@
     <Style x:Key="DarkDataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource DataGridForegroundBrush}"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontFamily" Value="{Binding HeaderFontFamily, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontSize" Value="{Binding HeaderFontSize, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontWeight" Value="{Binding HeaderFontWeight, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontStyle" Value="{Binding HeaderFontStyle, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontStretch" Value="{Binding HeaderFontStretch, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Margin" Value="{Binding HeaderMargin, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="{Binding HeaderHorizontalAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="DataGridColumnHeader">
@@ -30,7 +35,32 @@
                             Margin="{TemplateBinding Margin}">
                         <ContentPresenter Margin="{Binding HeaderContentMargin, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                         VerticalAlignment="Center"
-                                        HorizontalAlignment="Left"/>
+                                        HorizontalAlignment="{Binding HeaderHorizontalAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        TextBlock.TextAlignment="{Binding HeaderTextAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Cell Style -->
+    <Style x:Key="DarkDataGridCellStyle" TargetType="DataGridCell">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontFamily" Value="{Binding CellFontFamily, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontSize" Value="{Binding CellFontSize, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontWeight" Value="{Binding CellFontWeight, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontStyle" Value="{Binding CellFontStyle, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FontStretch" Value="{Binding CellFontStretch, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="{Binding CellHorizontalAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <Border Background="{TemplateBinding Background}" 
+                            Padding="{Binding CellPadding, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="{Binding CellHorizontalAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        TextBlock.TextAlignment="{Binding CellTextAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -83,21 +113,5 @@
                 <Setter Property="Background" Value="{DynamicResource DataGridAlternateRow2Brush}"/>
             </Trigger>
         </Style.Triggers>
-    </Style>
-
-    <!-- Cell Style -->
-    <Style x:Key="DarkDataGridCellStyle" TargetType="DataGridCell">
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="DataGridCell">
-                    <Border Background="{TemplateBinding Background}" 
-                            Padding="{Binding CellPadding, RelativeSource={RelativeSource AncestorType=UserControl}}">
-                        <ContentPresenter VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
 </ResourceDictionary>

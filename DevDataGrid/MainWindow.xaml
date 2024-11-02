@@ -42,6 +42,20 @@
             HeaderContentMargin="20 10 0 10"
             RowMargin="8,4"
             CellPadding="15,0"
+            
+            HeaderFontFamily="Arial"
+            HeaderFontSize="16"
+            HeaderFontWeight="Bold"
+            HeaderFontStyle="Italic"
+            HeaderTextAlignment="Center"
+            HeaderHorizontalAlignment="Center"
+    
+            CellFontFamily="Calibri"
+            CellFontSize="14"
+            CellFontWeight="Normal"
+            CellFontStyle="Normal"
+            CellTextAlignment="Right"
+            CellHorizontalAlignment="Right"
             />
     </Grid>
 </Window>
