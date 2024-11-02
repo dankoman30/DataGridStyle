@@ -32,6 +32,11 @@
             HeaderBackgroundColor="#FF6B5BC5"
             RowHoverColor="#FFFF0000"
             AlternateRow1Color="#FF1E1E1E"
-            AlternateRow2Color="#FF353535"/>
+            AlternateRow2Color="#FF353535"
+            GridBorderThickness="1,1,1,1"
+            RowHeight="50"
+            HeaderCornerRadius="4,4,4,4"
+            RowCornerRadius="4,4,4,4"
+            />
     </Grid>
 </Window>

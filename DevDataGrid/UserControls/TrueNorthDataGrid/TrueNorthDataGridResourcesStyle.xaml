@@ -6,9 +6,8 @@
         <Setter Property="Background" Value="{DynamicResource DataGridBackgroundBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource DataGridForegroundBrush}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="{Binding GridBorderThickness, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         <Setter Property="GridLinesVisibility" Value="None"/>
-        <Setter Property="RowHeight" Value="40"/>
         <Setter Property="HeadersVisibility" Value="Column"/>
         <Setter Property="VerticalGridLinesBrush" Value="Transparent"/>
         <Setter Property="HorizontalGridLinesBrush" Value="Transparent"/>
@@ -27,7 +26,7 @@
                 <ControlTemplate TargetType="DataGridColumnHeader">
                     <Border Background="{DynamicResource DataGridHeaderBackgroundBrush}"
                             BorderThickness="0"
-                            CornerRadius="8"
+                            CornerRadius="{Binding HeaderCornerRadius, RelativeSource={RelativeSource AncestorType=UserControl}}"
                             Margin="{TemplateBinding Margin}">
                         <ContentPresenter Margin="10,10"
                                         VerticalAlignment="Center"
@@ -49,7 +48,7 @@
                 <ControlTemplate TargetType="DataGridRow">
                     <Border x:Name="RowBorder" 
                             Background="{TemplateBinding Background}"
-                            CornerRadius="8" 
+                            CornerRadius="{Binding RowCornerRadius, RelativeSource={RelativeSource AncestorType=UserControl}}"
                             Margin="{TemplateBinding Margin}">
                         <SelectiveScrollingGrid>
                             <SelectiveScrollingGrid.ColumnDefinitions>

@@ -58,13 +58,67 @@ namespace DevDataGrid.UserControls
         }
         #endregion
 
+        #region Layout Properties
+        public static readonly DependencyProperty GridBorderThicknessProperty =
+            DependencyProperty.Register(
+                "GridBorderThickness",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(0)));
+
+        public Thickness GridBorderThickness
+        {
+            get { return (Thickness)GetValue(GridBorderThicknessProperty); }
+            set { SetValue(GridBorderThicknessProperty, value); }
+        }
+
+        public static readonly DependencyProperty RowHeightProperty =
+            DependencyProperty.Register(
+                "RowHeight",
+                typeof(double),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(40.0));
+
+        public double RowHeight
+        {
+            get { return (double)GetValue(RowHeightProperty); }
+            set { SetValue(RowHeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderCornerRadiusProperty =
+            DependencyProperty.Register(
+                "HeaderCornerRadius",
+                typeof(CornerRadius),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new CornerRadius(8)));
+
+        public CornerRadius HeaderCornerRadius
+        {
+            get { return (CornerRadius)GetValue(HeaderCornerRadiusProperty); }
+            set { SetValue(HeaderCornerRadiusProperty, value); }
+        }
+
+        public static readonly DependencyProperty RowCornerRadiusProperty =
+            DependencyProperty.Register(
+                "RowCornerRadius",
+                typeof(CornerRadius),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new CornerRadius(8)));
+
+        public CornerRadius RowCornerRadius
+        {
+            get { return (CornerRadius)GetValue(RowCornerRadiusProperty); }
+            set { SetValue(RowCornerRadiusProperty, value); }
+        }
+        #endregion
+
         #region Color Properties
         public static readonly DependencyProperty BackgroundColorProperty =
             DependencyProperty.Register(
                 "BackgroundColor",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(18, 18, 18)));  // #FF121212
+                new PropertyMetadata(Color.FromRgb(18, 18, 18)));
 
         public Color BackgroundColor
         {
@@ -77,7 +131,7 @@ namespace DevDataGrid.UserControls
                 "ForegroundColor",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(221, 221, 221)));  // #FFDDDDDD
+                new PropertyMetadata(Color.FromRgb(221, 221, 221)));
 
         public Color ForegroundColor
         {
@@ -90,7 +144,7 @@ namespace DevDataGrid.UserControls
                 "HeaderBackgroundColor",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(107, 91, 197)));  // #FF6B5BC5
+                new PropertyMetadata(Color.FromRgb(107, 91, 197)));
 
         public Color HeaderBackgroundColor
         {
@@ -103,7 +157,7 @@ namespace DevDataGrid.UserControls
                 "RowHoverColor",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(45, 45, 45)));  // #FF2D2D2D
+                new PropertyMetadata(Color.FromRgb(45, 45, 45)));
 
         public Color RowHoverColor
         {
@@ -116,7 +170,7 @@ namespace DevDataGrid.UserControls
                 "AlternateRow1Color",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(30, 30, 30)));  // #FF1E1E1E
+                new PropertyMetadata(Color.FromRgb(30, 30, 30)));
 
         public Color AlternateRow1Color
         {
@@ -129,7 +183,7 @@ namespace DevDataGrid.UserControls
                 "AlternateRow2Color",
                 typeof(Color),
                 typeof(TrueNorthDataGrid),
-                new PropertyMetadata(Color.FromRgb(53, 53, 53)));  // #FF353535
+                new PropertyMetadata(Color.FromRgb(53, 53, 53)));
 
         public Color AlternateRow2Color
         {
