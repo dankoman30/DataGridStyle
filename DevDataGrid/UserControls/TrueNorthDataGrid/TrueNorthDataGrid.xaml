@@ -33,5 +33,5 @@
               AlternationCount="2"
               BorderThickness="{Binding GridBorderThickness, RelativeSource={RelativeSource AncestorType=UserControl}}"
               RowHeight="{Binding RowHeight, RelativeSource={RelativeSource AncestorType=UserControl}}"
-              Margin="10"/>
+              Margin="{Binding GridMargin, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
 </UserControl>

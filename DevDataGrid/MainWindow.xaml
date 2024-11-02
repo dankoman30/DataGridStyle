@@ -30,13 +30,18 @@
             BackgroundColor="#FF121212"
             ForegroundColor="#FFDDDDDD"
             HeaderBackgroundColor="#FF6B5BC5"
-            RowHoverColor="#FFFF0000"
+            RowHoverColor="#FF414141"
             AlternateRow1Color="#FF1E1E1E"
             AlternateRow2Color="#FF353535"
             GridBorderThickness="1,1,1,1"
             RowHeight="50"
             HeaderCornerRadius="4,4,4,4"
             RowCornerRadius="4,4,4,4"
+            GridMargin="20"
+            HeaderMargin="8,4"
+            HeaderContentMargin="20 10 0 10"
+            RowMargin="8,4"
+            CellPadding="15,0"
             />
     </Grid>
 </Window>

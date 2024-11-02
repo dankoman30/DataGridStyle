@@ -112,6 +112,74 @@ namespace DevDataGrid.UserControls
         }
         #endregion
 
+        #region Margin Properties
+        public static readonly DependencyProperty GridMarginProperty =
+            DependencyProperty.Register(
+                "GridMargin",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(10)));
+
+        public Thickness GridMargin
+        {
+            get { return (Thickness)GetValue(GridMarginProperty); }
+            set { SetValue(GridMarginProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderMarginProperty =
+            DependencyProperty.Register(
+                "HeaderMargin",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(5, 3, 5, 3)));
+
+        public Thickness HeaderMargin
+        {
+            get { return (Thickness)GetValue(HeaderMarginProperty); }
+            set { SetValue(HeaderMarginProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderContentMarginProperty =
+            DependencyProperty.Register(
+                "HeaderContentMargin",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(10, 10, 10, 10)));
+
+        public Thickness HeaderContentMargin
+        {
+            get { return (Thickness)GetValue(HeaderContentMarginProperty); }
+            set { SetValue(HeaderContentMarginProperty, value); }
+        }
+
+        public static readonly DependencyProperty RowMarginProperty =
+            DependencyProperty.Register(
+                "RowMargin",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(5, 3, 5, 3)));
+
+        public Thickness RowMargin
+        {
+            get { return (Thickness)GetValue(RowMarginProperty); }
+            set { SetValue(RowMarginProperty, value); }
+        }
+
+        public static readonly DependencyProperty CellPaddingProperty =
+            DependencyProperty.Register(
+                "CellPadding",
+                typeof(Thickness),
+                typeof(TrueNorthDataGrid),
+                new PropertyMetadata(new Thickness(10, 0, 10, 0)));
+
+        public Thickness CellPadding
+        {
+            get { return (Thickness)GetValue(CellPaddingProperty); }
+            set { SetValue(CellPaddingProperty, value); }
+        }
+        #endregion
+
+
         #region Color Properties
         public static readonly DependencyProperty BackgroundColorProperty =
             DependencyProperty.Register(
