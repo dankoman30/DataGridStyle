@@ -1,0 +1,31 @@
+﻿<Window x:Class="DevDataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:DevDataGrid.UserControls"
+        xmlns:local="clr-namespace:DevDataGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Data Collection -->
+        <CollectionViewSource x:Key="ItemsCollection">
+            <CollectionViewSource.Source>
+                <x:Array Type="local:GridItem">
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Checked Out"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Reserving"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Stopped"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Stopped"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
+                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
+                </x:Array>
+            </CollectionViewSource.Source>
+        </CollectionViewSource>
+    </Window.Resources>
+    <Grid>
+        <uc:TrueNorthDataGrid 
+            ItemsSource="{Binding Source={StaticResource ItemsCollection}}"/>
+    </Grid>
+</Window>

@@ -106,27 +106,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <!-- Data Collection -->
-        <CollectionViewSource x:Key="ItemsCollection">
-            <CollectionViewSource.Source>
-                <x:Array Type="local:GridItem">
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Checked Out"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Reserving"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Stopped"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Stopped"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
-                    <local:GridItem Module="VEVE" Item="Borg Cube" Proxy="HYDRA" Account="user4213@gmail.com" Status="Idle"/>
-                </x:Array>
-            </CollectionViewSource.Source>
-        </CollectionViewSource>
     </Window.Resources>
 
     <Grid>
         <DataGrid AutoGenerateColumns="True" 
-                  ItemsSource="{Binding Source={StaticResource ItemsCollection}}"
                   Style="{StaticResource DarkDataGridStyle}"
                   ColumnHeaderStyle="{StaticResource DarkDataGridColumnHeaderStyle}"
                   RowStyle="{StaticResource DarkDataGridRowStyle}"
