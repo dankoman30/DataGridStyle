@@ -9,6 +9,14 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/DevDataGrid;component/UserControls/TrueNorthDataGrid/TrueNorthDataGridResourcesStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Color Resources -->
+            <SolidColorBrush x:Key="DataGridBackgroundBrush" Color="{Binding BackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <SolidColorBrush x:Key="DataGridForegroundBrush" Color="{Binding ForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <SolidColorBrush x:Key="DataGridHeaderBackgroundBrush" Color="{Binding HeaderBackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <SolidColorBrush x:Key="DataGridRowHoverBrush" Color="{Binding RowHoverColor, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <SolidColorBrush x:Key="DataGridAlternateRow1Brush" Color="{Binding AlternateRow1Color, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <SolidColorBrush x:Key="DataGridAlternateRow2Brush" Color="{Binding AlternateRow2Color, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         </ResourceDictionary>
     </UserControl.Resources>
 

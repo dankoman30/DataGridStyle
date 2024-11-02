@@ -26,6 +26,12 @@
     </Window.Resources>
     <Grid>
         <uc:TrueNorthDataGrid 
-            ItemsSource="{Binding Source={StaticResource ItemsCollection}}"/>
+            ItemsSource="{Binding Source={StaticResource ItemsCollection}}"
+            BackgroundColor="#FF121212"
+            ForegroundColor="#FFDDDDDD"
+            HeaderBackgroundColor="#FF6B5BC5"
+            RowHoverColor="#FFFF0000"
+            AlternateRow1Color="#FF1E1E1E"
+            AlternateRow2Color="#FF353535"/>
     </Grid>
 </Window>
